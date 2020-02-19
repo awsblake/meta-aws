@@ -1,4 +1,3 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}:"
-KERNEL_EXTRACONFIGS_append = " file://linux-kernel.cfg \
-                               file://qcom8x96.cfg "
-
+cat >> ${S}/arch/${ARCH}/configs/${KERNEL_CONFIG} <<KERNEL_EXTRACONFIGS
+CONFIG_ANDROID_PARANOID_NETWORK=n
+KERNEL_EXTRACONFIGS
